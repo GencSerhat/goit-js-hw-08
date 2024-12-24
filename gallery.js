@@ -85,8 +85,9 @@ gallery.insertAdjacentHTML("beforeend", galleryMakeup); // gallery clasının i�
 gallery.addEventListener("click", (event) => {
   if (event.target.tagName === "IMG") {
     const original = event.target.getAttribute("data-source"); // resmin data-original özelliğini aldım.
+    event.preventDefault(); // varsayılan tıklama davranışını kaldırdım.
     const lightbox = basicLightbox.create(
-      ` <a class="gallery-link" href="${original}">
+      ` <a class="gallery-link" href="${original}">,
     <img width="1112" height="640" src="${original}">`,
       {
         onShow: () => {
