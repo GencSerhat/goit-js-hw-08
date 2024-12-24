@@ -22,6 +22,6 @@ li {
   height: 640px !important;
 }
 .basicLightbox__content img {
-  width: 100%;  /* Resmi, modal'ın genişliğine sığacak şekilde ölçeklendirdim */
+  width: 100%; /* Resmi, modal'ın genişliğine sığacak şekilde ölçeklendirdim */
   height: 100%; /* Resmi, modal'ın yüksekliğine sığacak şekilde ölçeklendirdim */
 }

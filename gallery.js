@@ -76,7 +76,9 @@ const gallery = document.querySelector(".gallery");
 const galleryMakeup = updateImages
   .map(
     ({ preview, original, description }) =>
-      `<li> <img class="gallery-image" src="${preview}" data-source="${original}" alt="${description}"/> </li>`
+      `<li> 
+     <a class="gallery-link" href="${original}">
+    <img class="gallery-image" src="${preview}" data-source="${original}" alt="${description}"/> </li>`
   )
   .join("");
 
@@ -87,7 +89,7 @@ gallery.addEventListener("click", (event) => {
     const original = event.target.getAttribute("data-source"); // resmin data-original özelliğini aldım.
     event.preventDefault(); // varsayılan tıklama davranışını kaldırdım.
     const lightbox = basicLightbox.create(
-      ` <a class="gallery-link" href="${original}">,
+      `
     <img width="1112" height="640" src="${original}">`,
       {
         onShow: () => {
