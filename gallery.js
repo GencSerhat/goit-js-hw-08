@@ -87,7 +87,7 @@ gallery.addEventListener("click", (event) => {
     const original = event.target.getAttribute("data-source"); // resmin data-original özelliğini aldım.
     const lightbox = basicLightbox.create(
       `
-    <img width="1400" height="900" src="${original}">`,
+    <img width="1112" height="640" src="${original}">`,
       {
         onShow: () => {
           // esc ye basılınca fonskiyonu çalıştır
